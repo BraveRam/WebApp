@@ -6,7 +6,7 @@ const tele = window.Telegram.WebApp;
 btn.addEventListener("click", () => {
   tele.ready();
   const data = tele.initDataUnsafe;
-  tele.sendData(data)
+  tele.sendData({id: 1})
   const tag = document.createElement("p");
   
   // Retrieve user ID and username
