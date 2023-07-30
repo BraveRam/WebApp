@@ -15,5 +15,5 @@ btn.addEventListener("click", () => {
   // Display user ID and username
   tag.innerHTML = `User ID: ${userId}<br>Username: ${username}`;
   main.appendChild(tag);
-  tele.close();
+  tele.sendData(data)
 });
