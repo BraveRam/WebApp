@@ -12,7 +12,7 @@ Telegram.WebApp.ready();
 
 btn.addEventListener("click", () => {
   
-  const data = Telegram.WebApp.initDataUnsafe;
+  //const data = Telegram.WebApp.initDataUnsafe;
   Telegram.WebApp.sendData("huh");
   Telegram.WebApp.close();
   /*const tag = document.createElement("p");
