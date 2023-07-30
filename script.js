@@ -10,10 +10,10 @@ Telegram.WebApp.ready();
     });*/
 
 
-btn.addEventListener("click", (event) => {
+btn.addEventListener("click", () => {
   
   const data = Telegram.WebApp.initDataUnsafe;
-  Telegram.WebApp.sendData(event);
+  Telegram.WebApp.sendData("huh");
   Telegram.WebApp.close();
   /*const tag = document.createElement("p");
   
