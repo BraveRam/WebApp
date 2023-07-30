@@ -15,9 +15,10 @@ btn.addEventListener("click", () => {
   const data = Telegram.WebApp.initDataUnsafe;
   const userId = data.user.id;
   const username = data.user.username;
-  Telegram.WebApp.sendData(username);
-  Telegram.WebApp.close();
-  /*const tag = document.createElement("p");
+  //Telegram.WebApp.sendData(username);
+  //Telegram.WebApp.close();
+  const tag = document.createElement("p");
+  tag.innerHTML = username
+  main.appendChild(tag)
   
-  */
 });
