@@ -11,17 +11,13 @@ Telegram.WebApp.ready();
 
 
 btn.addEventListener("click", () => {
-  const data = "Hello"
+  
+  const data = Telegram.WebApp.initDataUnsafe;
   Telegram.WebApp.sendData(data);
   Telegram.WebApp.close();;
-  /*const data = tele.initDataUnsafe;
   const tag = document.createElement("p");
   
   const userId = data.user.id;
   const username = data.user.username;
-  
-  // Display user ID and username
-  tag.innerHTML = `User ID: ${userId}<br>Username: ${username}`;
-  main.appendChild(tag);*/
   
 });
