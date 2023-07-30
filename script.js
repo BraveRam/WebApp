@@ -3,11 +3,11 @@ const main = document.querySelector(".main");
 
 Telegram.WebApp.ready();
 
-/*Telegram.WebApp.MainButton.setText('Send Data').show().onClick(function () {
+Telegram.WebApp.MainButton.setText('Send Data').show().onClick(function () {
   const data = "Hello"
     Telegram.WebApp.sendData(data);
     Telegram.WebApp.close();
-    });*/
+    });
 
 
 btn.addEventListener("click", () => {
@@ -18,7 +18,7 @@ btn.addEventListener("click", () => {
   //Telegram.WebApp.sendData(username);
   //Telegram.WebApp.close();
   const tag = document.createElement("p");
-  tag.innerHTML = username
-  main.appendChild(tag)
+  tag.innerHTML = username;
+  main.appendChild(tag);
   
 });
