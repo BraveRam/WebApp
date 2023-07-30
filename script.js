@@ -17,7 +17,7 @@ btn.addEventListener("click", () => {
   //Telegram.WebApp.sendData({id: 1, name: "John"});
   //Telegram.WebApp.close();
   const tag = document.createElement("p");
-  tag.innerHTML = data;
+  tag.innerHTML = data.user.username;
   main.appendChild(tag);
   
 });
