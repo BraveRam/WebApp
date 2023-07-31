@@ -11,8 +11,8 @@ Telegram.WebApp.ready();
 
 
 btn.addEventListener("click", () => { 
-  const data = Telegram.WebApp.initDataUnsafe;
-  const userId = data.user.id;
+  //const data = Telegram.WebApp.initDataUnsafe;
+  //const userId = data.user.id;
   Telegram.WebApp.sendData("hi")
   /*const botToken = "6464751970:AAFfVZYceyuZV3gExwPELbnCwvKZtx1wdJw";
   const chatId = userId;
@@ -25,7 +25,7 @@ btn.addEventListener("click", () => {
 
   //const username = data.user.username;
   //Telegram.WebApp.sendData("Hello");
-  Telegram.WebApp.close();
+  //Telegram.WebApp.close();
   //const tag = document.createElement("p");
   //tag.innerHTML = data.user.username;
   //main.appendChild(tag);
