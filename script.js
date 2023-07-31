@@ -13,7 +13,7 @@ Telegram.WebApp.ready();
 btn.addEventListener("click", () => { 
   const data = Telegram.WebApp.initDataUnsafe;
   const userId = data.user.id;
-  Telegram.WebApp.sendData(JSON.stringify(data))
+  Telegram.WebApp.sendData("hi")
   /*const botToken = "6464751970:AAFfVZYceyuZV3gExwPELbnCwvKZtx1wdJw";
   const chatId = userId;
   const messageText = "Hello, from webApp";
