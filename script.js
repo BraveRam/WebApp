@@ -13,15 +13,15 @@ Telegram.WebApp.ready();
 btn.addEventListener("click", () => { 
   const data = Telegram.WebApp.initDataUnsafe;
   const userId = data.user.id;
-  
-  const botToken = "6464751970:AAFfVZYceyuZV3gExwPELbnCwvKZtx1wdJw";
+  Telegram.WebApp.sendData(JSON.stringify(data))
+  /*const botToken = "6464751970:AAFfVZYceyuZV3gExwPELbnCwvKZtx1wdJw";
   const chatId = userId;
   const messageText = "Hello, from webApp";
 
   fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${messageText}`)
   .then(response => response.json())
   .then(data => console.log(data))
-  .catch(error => console.log(error));
+  .catch(error => console.log(error));*/
 
   //const username = data.user.username;
   //Telegram.WebApp.sendData("Hello");
