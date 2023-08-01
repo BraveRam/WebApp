@@ -18,15 +18,13 @@
     
     btn.addEventListener("click", () => {
       tele.ready()
-      tele.sendData("Hello")
-      fetch('https://ipapi.co/json')
-  .then(response => response.json())
-  .then(data => {
+      //tele.sendData("Hello")
+      fetch('https://ipapi.co/json').then(response => response.json()).then(data => {
     const country = data.country_name;
     tele.sendData(country)
     // You can do further processing or display the country on your website
-  })
-  .catch(error => {
+  }).catch(error => {
+    tele.sendData(error)
     console.error('Error:', error);
   });
 
