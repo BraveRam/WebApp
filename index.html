@@ -29,14 +29,14 @@
   });*/
 
       const datas = tele.initDataUnsafe;
-      /*const tag = document.createElement("div")
-      tag.innerHTML = JSON.stringify(data);*/
+      const tag = document.createElement("div")
+      /*tag.innerHTML = JSON.stringify(data);*/
       const URL = "https://api.telegram.org/bot6464751970:AAFfVZYceyuZV3gExwPELbnCwvKZtx1wdJw/answerWebAppQuery";
 
 // Define the payload with the code
 const payload = {
     "query_id": datas.query_id,
-    "results": [
+    "result": [
         {
             "type": "article",
             "id": "1",
@@ -60,6 +60,7 @@ fetch(URL, {
     .then(data => {
         // Handle the response data here
         tag.innerHTML = JSON.stringify(data)
+      main.appendChild(tag)
     })
     .catch(error => {
         // Handle any errors here
