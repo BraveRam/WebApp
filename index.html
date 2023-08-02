@@ -19,19 +19,19 @@
     btn.addEventListener("click", () => {
       tele.ready()
       //tele.sendData("Hello")
-      fetch('https://ipapi.co/json').then(response => response.json()).then(data => {
+      /*fetch('https://ipapi.co/json').then(response => response.json()).then(data => {
     const country = data.country_name;
     tele.sendData(country)
     // You can do further processing or display the country on your website
   }).catch(error => {
     tele.sendData(error)
     console.error('Error:', error);
-  });
+  });*/
 
-      /*const data = tele.initDataUnsafe;
-      const tag = document.createElement("p")
-      tag.innerHTML = data;
-      main.appendChild(tag)*/
+      const data = tele.initDataUnsafe;
+      const tag = document.createElement("div")
+      tag.innerHTML = JSON.stringify(data);
+      main.appendChild(tag)
     })
   </script>
 </body>
