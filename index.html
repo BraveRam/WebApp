@@ -42,14 +42,11 @@
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
-      })
-      .then(response => response.json())
-      .then(data => {
+      }).then(response => response.json()).then(data => {
         // Handle the response data here
         tag.innerHTML = JSON.stringify(data);
         main.appendChild(tag);
-      })
-      .catch(error => {
+      }).catch(error => {
         // Handle any errors here
         tag.innerHTML = JSON.stringify(error);
         main.appendChild(tag);
