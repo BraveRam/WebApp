@@ -28,9 +28,43 @@
     console.error('Error:', error);
   });*/
 
-      const data = tele.initDataUnsafe;
-      const tag = document.createElement("div")
-      tag.innerHTML = JSON.stringify(data);
+      const datas = tele.initDataUnsafe;
+      /*const tag = document.createElement("div")
+      tag.innerHTML = JSON.stringify(data);*/
+      const URL = "https://api.telegram.org/bot6464751970:AAFfVZYceyuZV3gExwPELbnCwvKZtx1wdJw/answerWebAppQuery";
+
+// Define the payload with the code
+const payload = {
+    "query_id": datas.query_id,
+    "results": [
+        {
+            "type": "article",
+            "id": "1",
+            "title": "Result1",
+            "input_message_content": {
+                "message_text": "hi"
+            }
+        }
+    ]
+};
+
+// Make the POST request
+fetch(URL, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+})
+    .then(response => response.json())
+    .then(data => {
+        // Handle the response data here
+        tag.innerHTML = JSON.stringify(data)
+    })
+    .catch(error => {
+        // Handle any errors here
+        tag.innerHTML = JSON.stringify(data)
+    });
       main.appendChild(tag)
     })
   </script>
