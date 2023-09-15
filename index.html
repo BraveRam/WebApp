@@ -39,6 +39,7 @@
         body: JSON.stringify(payload)
       }).then(response => response.json()).then(data => {
         // Handle the response data here
+        tele.close()
         tag.innerHTML = JSON.stringify(data);
         main.appendChild(tag);
       }).catch(error => {
@@ -46,7 +47,7 @@
         tag.innerHTML = JSON.stringify(error);
         main.appendChild(tag);
       }); 
-    tele.close()
+    
     }
     
     btn.addEventListener("click", () => {
