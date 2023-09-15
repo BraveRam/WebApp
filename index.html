@@ -58,7 +58,8 @@
         id = datas.query_id
         Inline(id)
       } else {
-        tele.sendData(JSON.stringify({"msg": "Hey!"}))
+        const rand = Math.floor(Math.random() * 100000000);
+        tele.sendData(JSON.stringify({"msg": rand}))
         tele.close()
       }
       
