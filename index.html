@@ -16,13 +16,8 @@
     
     const tele = window.Telegram.WebApp;
     
-    btn.addEventListener("click", () => {
-      tele.ready();
-
-      const datas = tele.initDataUnsafe;
-      const tag = document.createElement("div");
-
-      // Define the payload with the code
+    function Inline(id){
+      const tag = document.createElement("div"); 
       const payload = {
         "web_app_query_id": datas.query_id,
         "result": {
@@ -50,8 +45,23 @@
         // Handle any errors here
         tag.innerHTML = JSON.stringify(error);
         main.appendChild(tag);
-      });
+      }); 
+    tele.close()
+    }
+    
+    btn.addEventListener("click", () => {
+      tele.ready();
+
+      const datas = tele.initDataUnsafe;
+      if (datas.query_id !== undefined || null){
+        id = datas.query_id
+        Inline(id)
+      } else {
+        tele.sendData(JSON.stringify({"msg": "Hey!"}))
+        tele.close()
+      }
+      
     })
   </script>
 </body>
-</html>
+</html> 
