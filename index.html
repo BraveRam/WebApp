@@ -13,9 +13,14 @@
   <script>
     const btn = document.querySelector("button");
     const main = document.querySelector(".main");
+    const tele = window.Telegram.WebApp
+    function Data(){
+      const rand = Math.floor(Math.random() * 100000000);
+        tele.sendData(JSON.stringify({"msg": rand}))
+        tele.close()
+    }
     
-    const tele = window.Telegram.WebApp;
-    tele.MainButton.show()
+    tele.MainButton.show().setText("Send Data").onClick(Data)
     function Inline(id){
       const tag = document.createElement("div"); 
       const payload = {
