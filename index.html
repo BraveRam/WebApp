@@ -8,19 +8,27 @@
 </head>
 <body>
   <div class="main">
-    <button>Click Here</button>
+    <button class="btn">Click Here</button>
+    <button class="hide">Hide Menu</button>
   </div>
   <script>
-    const btn = document.querySelector("button");
+    const btn = document.querySelector(".btn");
+    const hide = document.querySelector(".hide");
     const main = document.querySelector(".main");
     const tele = window.Telegram.WebApp
+    tele.MainButton.show().setText("Send Data").onClick(Data)
     function Data(){
       const rand = Math.floor(Math.random() * 100000000);
         tele.sendData(JSON.stringify({"msg": rand}))
         tele.close()
     }
     
-    tele.MainButton.show().setText("Send Data").onClick(Data)
+    hide.onClick(()=>{
+      tele.MainButton.hide()
+    })
+
+
+    
     function Inline(id){
       const tag = document.createElement("div"); 
       const payload = {
