@@ -16,7 +16,8 @@
     const hide = document.querySelector(".hide");
     const main = document.querySelector(".main");
     const tele = window.Telegram.WebApp
-    tele.MainButton.show().setText("Send Data").onClick(Data)
+    tele.ready()
+    let main-btn =tele.MainButton.show().setText("Send Data").onClick(Data)
     function Data(){
       const rand = Math.floor(Math.random() * 100000000);
         tele.sendData(JSON.stringify({"msg": rand}))
@@ -24,7 +25,7 @@
     }
     
     hide.onClick(()=>{
-      tele.MainButton.hide()
+      return main-btn.hide()
     })
 
 
@@ -64,7 +65,7 @@
     }
     
     btn.addEventListener("click", () => {
-      tele.ready();
+
 
       const datas = tele.initDataUnsafe;
       if (datas.query_id !== undefined || null){
